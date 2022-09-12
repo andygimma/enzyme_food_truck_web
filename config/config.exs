@@ -46,5 +46,5 @@ config :food_truck, FoodTruck.Scheduler,
     # Every minute
     # {"* * * * *", {FoodTruckAPI.V1.SanFrancisco, :send, []}}
     # Runs every midnight:
-    # {"@daily", {Backup, :backup, []}}
+    {"@daily", {FoodTruckAPI.V1.SanFrancisco, :food_trucks, []}}
   ]
