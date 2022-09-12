@@ -5,9 +5,10 @@ defmodule FoodTruckAPI.V1.Persist do
   plug Tesla.Middleware.JSON
 
   def get_by_nearest() do
-    {:ok, result} = Repo.query("
-      SELECT applicant, ST_Distance(ST_MakePoint(-122.431297, 37.773972), ST_GeogFromText('POINT(' || latitude || ' ' || longitude || ')')) AS dist
+    Repo.query("
+      SELECT applicant, fooditems, address, status, objectid, latitude, longitude, ST_Distance(ST_MakePoint(-122.431297, 37.773972), ST_GeogFromText('POINT(' || longitude || ' ' || latitude || ')')) AS dist
       FROM food_trucks
+      WHERE status = 'APPROVED'
       ORDER BY dist LIMIT 10;
     ")
   end
