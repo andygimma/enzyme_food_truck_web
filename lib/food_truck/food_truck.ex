@@ -18,6 +18,14 @@ defmodule FoodTruck.FoodTruck do
   def changeset(food_truck, attrs) do
     food_truck
     |> cast(attrs, [:applicant, :address, :fooditems, :latitude, :longitude, :objectid, :status])
-    |> validate_required([:applicant, :address, :fooditems, :latitude, :longitude, :objectid, :status])
+    |> validate_required([
+      :applicant,
+      :address,
+      :fooditems,
+      :latitude,
+      :longitude,
+      :objectid,
+      :status
+    ])
   end
 end
