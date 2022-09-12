@@ -1,5 +1,14 @@
 # FoodTruck
 
+To start your Docker Postgis DB:
+
+  * docker run --name=postgis -d -e POSTGRES_USER=postgres -e POSTGRES_PASS=password -e POSTGRES_DBNAME=gis -e ALLOW_IP_RANGE=0.0.0.0/0 -p 5432:5432 -v pg_data:/var/lib/postgresql --restart=always kartoza/postgis:latest
+
+To restart your Docker Postgis DB:
+
+  * docker start -i postgis
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

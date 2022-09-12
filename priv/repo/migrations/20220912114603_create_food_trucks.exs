@@ -3,11 +3,11 @@ defmodule FoodTruck.Repo.Migrations.CreateFoodTrucks do
 
   def change do
     create table(:food_trucks) do
-      add :applicant, :text
+      add :applicant, :string
       add :address, :string
-      add :fooditems, :string
-      add :latitude, :string
-      add :longitude, :string
+      add :fooditems, :text
+      add :latitude, :float
+      add :longitude, :float
       add :objectid, :string
       add :status, :string
 

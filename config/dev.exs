@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :food_truck, FoodTruck.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "password",
   hostname: "localhost",
   database: "food_truck_dev",
   stacktrace: true,

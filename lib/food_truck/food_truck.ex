@@ -6,8 +6,8 @@ defmodule FoodTruck.FoodTruck do
     field :address, :string
     field :applicant, :string
     field :fooditems, :string
-    field :latitude, :string
-    field :longitude, :string
+    field :latitude, :float
+    field :longitude, :float
     field :objectid, :string
     field :status, :string
 
